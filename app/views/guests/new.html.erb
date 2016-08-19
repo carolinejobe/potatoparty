@@ -1,0 +1,17 @@
+<div id="flash">
+  <% flash.each do |key, value| %>
+    <div class="flash <%= key %>"><%= value %></div>
+  <% end %>
+</div>
+
+<%= form_for @guest do |f| %>
+  name(s)
+  <%= f.text_field :name %></br>
+  we plan on eating 
+  <%= f.number_field :russet_potato %>russet potatoes.</br>
+  we plan on eating 
+  <%= f.number_field :sweet_potato %>sweet potatoes.</br>
+  Hey Caroline and Spencer, just wanted to let you know...</br>
+  <%= f.text_area(:message, size: "30x30") %>
+  <%= f.submit "submit" %>
+<% end %>

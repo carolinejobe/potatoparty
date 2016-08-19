@@ -1,0 +1,8 @@
+<%= render 'form', contribution: @contribution %>
+
+<% unless @contributions.empty? %>
+  <% @contributions.each do |contribution| %>
+    <%= contribution.person %> is bringing 
+    <%= contribution.food %>
+  <% end %>
+<% end %>

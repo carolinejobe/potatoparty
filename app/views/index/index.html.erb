@@ -1,5 +1,4 @@
 <% if signed_in? %>
-  Signed in as: <%= current_user.email %>
   <%= button_to 'sign out', sign_out_path, method: :delete %>
 <% else %>
   <%= link_to 'host sign in', sign_in_path %>
@@ -12,3 +11,4 @@
 </div>
 
 <h1>potato party 2016<h1>
+<%= link_to "reserve a potato", new_guest_path %>
