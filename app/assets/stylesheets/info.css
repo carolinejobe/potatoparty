@@ -2,7 +2,13 @@ body {
 	background-image:url('blured_pattern.jpg');
 }
 
-
+.contrib button {
+  background-color:rgb(255,0,0);
+  
+}
+.contrib textbox {
+  font-family: "Courier New";
+}
 
 .retro-font {
 	font-weight:lighter;

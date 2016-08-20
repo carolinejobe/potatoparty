@@ -1,6 +1,23 @@
+Let everyone know what topping you’re bringing! More of a dessert fan? That’s cool, just put it on the list.
+
+Need inspiration? 
+At the original Baked Potato Club that started it all (back in Baltimore at the now-closed <%= link_to 'Birches', 'http://www.birchesrestaurant.com/', target: '_blank' %>, you could order:
+chopped tomatoes, chopped pickles, grilled red onion, sour cream, jalapeno peppers, black beans, scrambled eggs, manzanilla olives, roast roma tomatoes, golden raisins, queso fresco, grilled sweet corn, roast poblano peppers, brussel sprouts, roast garlic chips, jumbo lump crab, carolina pulled pork, saute beef filet tips, roast shallots, grape tomatoes, gorgonzola caramelized onions, banana pepper rings, roast pork belly, smoked mozzarella, backfin crab, boursin cheese, oven-roasted roma tomatoes, sauteed ground beef, basil pesto, buffalo chicken, maple dry rub chicken, grilled chicken, mozzarella di bufala, smoked mozzarella, vermont cheddar, feta cheese, goat cheese, gruyere, mushrooms, artichoke hearts, halloumi, demi-glace, boursin cheese, colby jack, crumbled blue cheese, avocado, applewood smoked bacon, roasted peppers, pepperoni, scallions, chipotle aioli, lantana onions, tomato basil sauce, parmesan, mozzarella, grilled scallops, ground turkey, grilled flank steak, sauteed baby spinach, grilled asparagus
+
 <%= form_for contribution do |f| %>
-  name: <%= f.text_field :person %></br>
-  i'll bring: 
-  <%= f.text_field :food %>
-  <%= f.submit "submit" %>
+
+  <div class="contribs-form-row">
+    <div class="contribs-form-label"> name:</div> 
+    <%= f.text_field :person, class: "contribs-form-textbox" %>
+  </div>
+  
+  <div class="contribs-form-row">
+    <div class="contribs-form-label">i'll bring:</div> 
+    <%= f.text_field :food, class: "contribs-form-textbox" %>
+  </div>
+
+  <div class="congribs-form-row">
+    <%= f.submit "submit", class:"contribs-form-submit-btn"%>
+  </div>
+  
 <% end %>

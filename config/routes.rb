@@ -3,4 +3,8 @@ Rails.application.routes.draw do
   resources :guests
   resources :users
   resources :contributions
+  controller :pages do
+    get :info
+    get :directions
+  end
 end

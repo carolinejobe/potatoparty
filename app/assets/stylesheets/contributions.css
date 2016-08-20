@@ -1,0 +1,44 @@
+
+.contribs-form-label {
+  position:relative;;
+  padding:16px;
+  font-size: 1.5em;
+  display:inline-block;
+  width:80px;
+}
+
+.contribs-form-textbox {
+  position: relative;
+  font-size:1.2em;
+  width:256px;
+  padding:4px;  
+}
+
+.contribs-form-submit-btn {
+  position:relative;
+  font-size:1.2em;
+  background:rgb(240,240,240);
+  border: 1px solid rgb(255,255,255);
+}
+
+.contribs-title {
+	font-size: 2.0em;
+	font-weight: bold;
+}
+
+.contribs-page {
+	font-size: 1.0em;
+	background:rgba(255,255,255,.6);
+	position: relative;
+	top:5%;
+	left:5%;
+	height:auto;
+	width:90%;
+}
+
+.contribs-form-row {
+  position:relative;
+  width:90%;
+  height:40px;
+  
+}

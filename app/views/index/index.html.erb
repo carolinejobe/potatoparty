@@ -1,14 +1,52 @@
+<div style="position:fixed; top:0px; left:0px;">
 <% if signed_in? %>
   <%= button_to 'sign out', sign_out_path, method: :delete %>
 <% end %>
+</div>
 
 <div id="flash">
   <% flash.each do |key, value| %>
     <div class="flash <%= key %>"><%= value %></div>
   <% end %>
 </div>
+<div class="page">
+  
+  <img class="background-image" src="/assets/home_background.jpg">
+  
+  <div class="banner">
 
-<h1>potato party 2016<h1>
-<%= link_to "reserve a potato", new_guest_path %>
-<%= link_to "food board", contributions_path %>
-<%= host_view_links %>
+    <div class="sub-banner retro-font sb-row-0">
+      Caroline &amp; Spencer's
+    </div>
+
+    <div class="sub-banner retro-font sb-row-1">
+      3rd annual
+    </div>
+    <div class="sub-banner retro-font sb-row-2">
+      potato<br>
+      party
+    </div>
+    <div class="sub-banner retro-font sb-row-3">
+      saturday 9.10.16
+    </div>
+    <div class="sub-banner retro-font sb-row-4">
+      <a href="/directions/" class="bold-link" >6pm @ our house</a>
+    </div>
+  </div>
+
+  <div class="skillet">
+    <div class="sub-banner retro-font skl-row-1">
+      <a href="/reserve/" class="block-link">claim<br>a&nbsp;potato</a>
+    </div>
+  </div>
+</div>
+
+
+<div class="menu-wrapper2">
+  <div class="menu-wrapper">
+    <div class="retro-font menu">
+      <%= link_to "INFO", info_path %>
+      <%= link_to "FOOD", contributions_path %>
+    </div>
+  </div>
+</div>
