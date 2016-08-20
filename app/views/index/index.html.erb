@@ -1,7 +1,5 @@
 <% if signed_in? %>
   <%= button_to 'sign out', sign_out_path, method: :delete %>
-<% else %>
-  <%= link_to 'host sign in', sign_in_path %>
 <% end %>
 
 <div id="flash">
