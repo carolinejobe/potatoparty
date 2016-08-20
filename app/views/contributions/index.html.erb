@@ -4,5 +4,6 @@
   <% @contributions.each do |contribution| %>
     <%= contribution.person %> is bringing 
     <%= contribution.food %>
+    <%= display_delete_button(contribution) %>
   <% end %>
 <% end %>

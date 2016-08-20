@@ -1,0 +1,7 @@
+<h2>russet:  <%= Guest.sum(:russet_potato) %></h2>
+<h2>sweet:   <%= Guest.sum(:sweet_potato) %></h2>
+
+<% @guests.each do |guest| %>
+  <ul><%= guest.name %> <%= guest.russet_potato %> <%= guest.sweet_potato %></ul>
+<% end %>
+

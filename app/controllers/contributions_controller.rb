@@ -15,6 +15,12 @@ class ContributionsController < ApplicationController
     end
   end
   
+  def destroy
+    @contribution = Contribution.find(params[:id])
+    @contribution.destroy
+    redirect_to :back, alert: "Post deleted."
+  end
+  
   private
   
     def contribution_params

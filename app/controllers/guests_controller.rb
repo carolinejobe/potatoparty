@@ -1,6 +1,11 @@
 class GuestsController < ApplicationController
+  before_action :require_login, only: :index
   def new
     @guest = Guest.new
+  end
+
+  def index
+    @guests = Guest.all
   end
   
   def create
