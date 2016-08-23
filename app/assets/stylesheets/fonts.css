@@ -3,3 +3,8 @@
 	color:rgb(253,252,250);
 	font-family: "Courier New";
 }
+.retro-font-black {
+	font-weight:lighter;
+  color:rgb(0,0,0);
+	font-family: "Courier New";
+}

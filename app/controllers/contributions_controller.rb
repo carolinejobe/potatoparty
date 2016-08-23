@@ -1,6 +1,6 @@
 class ContributionsController < ApplicationController
   def index
-    @contributions = Contribution.all
+    @contributions = Contribution.all.order(:created_at).reverse
     @contribution = Contribution.new
   end
 

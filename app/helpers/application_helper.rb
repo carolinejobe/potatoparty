@@ -2,7 +2,7 @@ module ApplicationHelper
   
   def display_delete_button(contribution)
     if signed_in?
-      content_tag(:div) do
+      content_tag(:div, class:"contribs-food-list-div") do
         link_to('Delete', contribution_path(contribution), method: :delete)
       end
     end

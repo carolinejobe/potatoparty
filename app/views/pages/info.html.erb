@@ -1,20 +1,32 @@
-<p>
-Who: Bring your friends, family, kids, significant others, first dates, neighbors… just give us a heads up with <%= link_to 'the potato count', contributions_path %>
+<div class="retro-font contribs-page" style="font-size:1.7em">
+  <div class="contribs-page-background">
+    <ul >
+      <li><b>Who</b>: Bring your friends, family, kids, significant others, first dates, neighbors… just give us a heads up with <%= link_to 'the potato count', new_guest_path, style:"text-decoration:underline;" %></li><br>
 
-When: Saturday, September 10, 2016, 6pm
+      <li><b>When</b>: Saturday, September 10, 2016, 6pm</li><br>
+      
+      <li><b>Where</b>: 
+      <a href="https://goo.gl/maps/ZpbWbUQSM862" style="text-decoration:underline" target="_blank">Our place, 116 Albertson Street, Rochester, MI 48307</a></li><br>
 
-Why: Potatoes are delicious and parties are fun.
+      <li><b>Why</b>: Potatoes are delicious and parties are fun.</li><br>
 
-How: We’ll bake the potatoes, you bring the toppings.
+      <li><b>How</b>: We’ll bake the potatoes, you bring the toppings.</li><br>
 
-We’ll have:
-  potatoes. lots. 
-  drinks - beer, wine, liquor, juice boxes, water, soda
-  as much outdoor seating as we can fit. some indoor too.
-  good music.
+      <li>We’ll have:
+        <ul>
+          <li>potatoes. lots.</li>
+          <li>drinks - beer, wine, liquor, juice boxes, water, soda.</li>
+          <li>as much outdoor seating as we can fit. some indoor too.</li>
+          <li>good music.</li>
+        </ul>
+      </li><br>
 
-If you want, you can bring:
-  a topping!
-  camping chairs - extra seating always helps
-  drinks - we’ll have lots (see above), but extra drinks to share are always appreciated
-</p>
+      <li>If you want, you can bring:</li>
+        <ul>
+          <li><%= link_to "a topping!", contributions_path, style:"text-decoration:underline;" %></li>
+          <li>camping chairs - extra seating always helps.</li>
+          <li>drinks - we’ll have lots (see above), but extra drinks to share are always appreciated.</li>
+        </ul>
+    </ul>
+  </div>
+</div>

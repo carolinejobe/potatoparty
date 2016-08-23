@@ -1,17 +1,27 @@
-<div id="flash">
-  <% flash.each do |key, value| %>
-    <div class="flash <%= key %>"><%= value %></div>
-  <% end %>
-</div>
+<div class="retro-font contribs-page">
+  <div class="contribs-page-background" style="font-size:1.7em">
+    <div id="flash">
+      <% flash.each do |key, value| %>
+        <div class="flash <%= key %>"><%= value %></div>
+      <% end %>
+    </div>
 
-<%= form_for @guest do |f| %>
-  name(s)
-  <%= f.text_field :name %></br>
-  we plan on eating 
-  <%= f.number_field :russet_potato %>russet potatoes.</br>
-  we plan on eating 
-  <%= f.number_field :sweet_potato %>sweet potatoes.</br>
-  Hey Caroline and Spencer, just wanted to let you know...</br>
-  <%= f.text_area(:message, size: "30x30") %>
-  <%= f.submit "submit" %>
-<% end %>
+    <%= form_for @guest do |f| %>
+      <div class="contribs-form-row">
+        name(s): 
+        <%= f.text_field :name, class: "contribs-form-name-box" %>
+      </div>
+      <div class="contribs-form-row">
+        we plan on eating: 
+        <%= f.number_field :russet_potato, value: 0, class: "contribs-form-number-box" %> russet potatoes.
+      </div>
+      <div class="contribs-form-row">
+        we plan on eating:
+        <%= f.number_field :sweet_potato, value: 0, class: "contribs-form-number-box" %> sweet potatoes.
+      </div><br>
+      Hey Caroline and Spencer, just wanted to let you know...</br>
+      <%= f.text_area(:message, size: "60x10", class: "text-area-one") %>
+      <%= f.submit(value:"submit", class:"butter-button") %>
+    <% end %>
+  </div>
+</div>

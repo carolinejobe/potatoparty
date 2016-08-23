@@ -13,8 +13,10 @@
 ActiveRecord::Schema.define(version: 20160819020335) do
 
   create_table "contributions", force: :cascade do |t|
-    t.string "food"
-    t.string "person"
+    t.string   "food"
+    t.string   "person"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "guests", force: :cascade do |t|
