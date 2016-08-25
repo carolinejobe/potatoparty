@@ -7,10 +7,10 @@ class ContributionsController < ApplicationController
   def create
     @contribution = Contribution.new(contribution_params)
     if @contribution.save
-      flash[:notice] = "Can't wait to see you!"
+      flash[:notice] = "Sounds great!"
       redirect_to contributions_path
     else
-      flash[:alert] = "we're gonna need a name..."
+      flash[:alert] = "We're gonna need a little more info..."
       redirect_to :back
     end
   end

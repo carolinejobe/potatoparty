@@ -1,5 +1,10 @@
 <div class="retro-font contribs-page">
   <div class="contribs-page-background">
+    <div id="flash">
+      <% flash.each do |key, value| -%>
+        <div id="flash_<%= key %>"><%=h value %></div>
+      <% end %>
+    </div>
     <%= render 'form', contribution: @contribution %>
   <div class="contribs-food-list-title">Who's bringing what?</div>
   <div class="contribs-food-list">

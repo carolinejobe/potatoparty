@@ -29,9 +29,3 @@
     </div>
   </div>
 </div>
-
-<div style="position:fixed; top:0px; left:0px;">
-  <% if signed_in? %>
-    <%= button_to 'sign out', sign_out_path, method: :delete %>
-  <% end %>
-</div>

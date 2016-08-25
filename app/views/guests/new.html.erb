@@ -21,7 +21,7 @@
       </div><br>
       Hey Caroline and Spencer, just wanted to let you know...</br>
       <%= f.text_area(:message, size: "60x10", class: "text-area-one") %>
-      <%= f.submit(value:"submit", class:"butter-button") %>
+      <%= f.submit(value:"submit", class:"butter-button", data: { confirm: "Are you sure?" } ) %>
     <% end %>
   </div>
 </div>
