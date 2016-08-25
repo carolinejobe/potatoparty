@@ -3,10 +3,14 @@
     <div class="retro-font home-button">
     </div>
     <div class="retro-font menu">
+      <% if signed_in? %>
+        <%= link_to "sign out", sign_out_path, method: :delete %>
+        <%= link_to "guest count", guests_path %>
+      <% end %>
       <%= link_to "HOME", root_path %>
-        <%= link_to "INFO", info_path %>
-        <%= link_to "FOOD", contributions_path %>
-        <%= link_to "RSVP", new_guest_path %>
+      <%= link_to "INFO", info_path %>
+      <%= link_to "FOOD", contributions_path %>
+      <%= link_to "RSVP", new_guest_path %>
     </div>
   </div>
 </div>
