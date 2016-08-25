@@ -2,10 +2,22 @@
   <div class="contribs-page-background">
     <h2>russet:  <%= Guest.sum(:russet_potato) %></h2>
     <h2>sweet:   <%= Guest.sum(:sweet_potato) %></h2>
-
-    <% @guests.each do |guest| %>
-      <ul><%= guest.name %>- russet:<%= guest.russet_potato %> | sweet:<%= guest.sweet_potato %></ul>
-    <% end %>
+    <table>
+      <tr>
+        <td>|Guest| </td>
+        <td>|Russet Potatoes| </td>
+        <td>|Sweet Potatoes| </td>
+        <td>|Message|</td>
+      </tr>
+      <% @guests.each do |guest| %>
+        <tr>
+          <td><%= guest.name %></td>
+          <td><%= guest.russet_potato %></td>
+          <td><%= guest.sweet_potato %></td>
+          <td><%= guest.message %></td>
+        </tr>
+      <% end %>
+    </table>
   </div>
 </div>
 
