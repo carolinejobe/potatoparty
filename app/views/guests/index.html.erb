@@ -1,7 +1,11 @@
-<h2>russet:  <%= Guest.sum(:russet_potato) %></h2>
-<h2>sweet:   <%= Guest.sum(:sweet_potato) %></h2>
+<div class="retro-font contribs-page">
+  <div class="contribs-page-background">
+    <h2>russet:  <%= Guest.sum(:russet_potato) %></h2>
+    <h2>sweet:   <%= Guest.sum(:sweet_potato) %></h2>
 
-<% @guests.each do |guest| %>
-  <ul><%= guest.name %> <%= guest.russet_potato %> <%= guest.sweet_potato %></ul>
-<% end %>
+    <% @guests.each do |guest| %>
+      <ul><%= guest.name %>- russet:<%= guest.russet_potato %> | sweet:<%= guest.sweet_potato %></ul>
+    <% end %>
+  </div>
+</div>
 

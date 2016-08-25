@@ -36,7 +36,6 @@ color:black;
 font-size:24px;
 font-weight:bold;
 position:relative;
-width:92px;
 height:92px;
 border-radius: 6px;
 display:block;
@@ -55,9 +54,7 @@ border-top-right-radius: 12px;
 border-top-left-radius: 12px;
 
 }
-.wide-button {
-  width:140px;
-}
+
 .contribs-form-number-box {
   position: relative;
   font-size:1.2em;
