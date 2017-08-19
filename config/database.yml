@@ -1,20 +1,20 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: my_database_development
+  database: potato-dev
   username: carolinejobe
   pool: 5
   
 test:
   adapter: postgresql
   encoding: unicode
-  database: my_database_test
+  database: potato-test
   username: carolinejobe
   pool: 5
 
 production:
   adapter: postgresql
   encoding: unicode
-  database: my_database_production
+  database: potato-prod
   username: carolinejobe
   pool: 5

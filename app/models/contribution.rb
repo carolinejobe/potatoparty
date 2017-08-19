@@ -1,4 +1,3 @@
 class Contribution < ApplicationRecord
-  validates :person, presence: true
-  validates :food, presence: true
+  belongs_to :guest, optional: true
 end

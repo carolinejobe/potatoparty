@@ -10,16 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160819020335) do
+ActiveRecord::Schema.define(version: 20170819191050) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "contributions", force: :cascade do |t|
     t.string   "food"
-    t.string   "person"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "guest_id"
+    t.index ["guest_id"], name: "index_contributions_on_guest_id", using: :btree
   end
 
   create_table "guests", force: :cascade do |t|
