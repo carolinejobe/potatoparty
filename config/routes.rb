@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   resources :users
   resources :contributions
   controller :pages do
-    get :info
+    get :about
+    get :history
     get :directions
   end
 end

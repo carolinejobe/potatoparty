@@ -1,16 +1,25 @@
-<div class="menu-wrapper2">
-  <div class="menu-wrapper">
-    <div class="retro-font home-button">
+<div class="nav navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">potato party 2017</a>
     </div>
-    <div class="retro-font menu">
-      <% if signed_in? %>
-        <%= link_to "sign out", sign_out_path, method: :delete %>
-        <%= link_to "guest count", guests_path %>
-      <% end %>
-      <%= link_to "HOME", root_path %>
-      <%= link_to "INFO", info_path %>
-      <%= link_to "FOOD", contributions_path %>
-      <%= link_to "RSVP", new_guest_path %>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <%= link_to "rsvp", new_guest_path %>
+        </li>
+        <li>
+          <%= link_to "about", about_path %>
+        </li>
+        <li>
+          <%= link_to "history", history_path %>
+        </li>
+        <li>
+          <%= link_to "food", contributions_path %>
+        </li>
+        <% if signed_in? %>
+        <li><%= link_to "sign out", sign_out_path, method: :delete %></li>
+        <li><%= link_to "guest count", guests_path %></li>
+        <% end %>
+      </ul>
     </div>
-  </div>
 </div>

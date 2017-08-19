@@ -1,22 +1,20 @@
-<div class="retro-font contribs-page">
-  <div class="contribs-page-background">
-    <div id="flash">
-      <% flash.each do |key, value| -%>
-        <div id="flash_<%= key %>"><%=h value %></div>
-      <% end %>
-    </div>
-    <%= render 'form', contribution: @contribution %>
-  <div class="contribs-food-list-title">Who's bringing what?</div>
-  <div class="contribs-food-list">
-    <% unless @contributions.empty? %>
-      <% @contributions.each do |contribution| %>
-        <span class="contribs-food-list-row">
-          <%= content_tag(:div, contribution.food, :class => "contribs-food-list-div") %> -- 
-          <%= content_tag(:div, contribution.person, :class => "contribs-food-list-div") %>
-          <%= display_delete_button(contribution) %>
-        </span>
-      <% end %>
+<div class="container">
+  <h3>
+    Here's what we're having:
+  </h3>
+<% if @contributions.present? %>
+  <table class="table table-bordered">
+    <% @contributions.each do |contribution| %>
+        <tr>
+          <td>
+            <%= contribution.food %>
+          </td>
+          <td>
+            <%= contribution.guest.name %>
+          </td>
+          <td><%= link_to('Delete', contribution_path(contribution), method: :delete) if signed_in? %></td>
+        </tr>
     <% end %>
-  </div>
-  </div>
+  </table>
+<% end %>
 </div>
