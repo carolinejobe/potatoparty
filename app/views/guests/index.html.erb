@@ -1,6 +1,6 @@
 <div class="container">
-  <h2>russet:  <%= Guest.sum(:russet_potato) %></h2>
-  <h2>sweet:   <%= Guest.sum(:sweet_potato) %></h2>
+  <h2>russet:  <%= Guest.this_year.sum(:russet_potato) %></h2>
+  <h2>sweet:   <%= Guest.this_year.sum(:sweet_potato) %></h2>
   <table class="table table-bordered">
     <thead>
       <tr>
