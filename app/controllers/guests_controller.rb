@@ -6,9 +6,9 @@ class GuestsController < ApplicationController
   end
 
   def index
-    @guests = Guest.all
+    @guests = Guest.this_year
   end
-  
+
   def create
     @guest = Guest.new(guest_params)
     if @guest.save
@@ -19,9 +19,9 @@ class GuestsController < ApplicationController
       redirect_back(fallback_location: new_guest_path)
     end
   end
-  
+
   private
-  
+
     def guest_params
       params.require(:guest).permit(:name, :russet_potato, :sweet_potato, :message, contribution_attributes: [:food])
     end
